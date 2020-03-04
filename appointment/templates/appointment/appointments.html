@@ -1,0 +1,37 @@
+{%extends 'index.html' %}{%block content%} {%load static%}
+<div class="homepage-boxes">
+    <div class="container">
+        <br>
+        <br> {% if error %} {{error}}
+        <br>
+        <br> {% endif %}
+
+        <div class="row">
+            <div class="col-18 col-md-10 col-lg-10 mt-10 h-100 align-items-center ">
+                <div class="appointment-box">
+                    <h2 class="d-flex align-items-left">Make an Appointment</h2>
+
+                    <form class="d-flex flex-wrap justify-content-between" method="POST" action="{%url 'makeappointment'%}">
+                        {% csrf_token %}
+                        <select class="select-doctor" name="doctor">
+                                <option>Select Doctor</option>
+                                <option>Mr.Shoaib</option>
+                                <option>Mr.Ahmad</option>
+                            </select>
+
+                        <input type="text" name="title" placeholder="Brief Reason">
+
+                        <input type="number" name="phone" placeholder="Phone No">
+
+                        <input class="button gradient-bg" type="submit" value="Book Appointment">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+</div>
+{%endblock%}

@@ -1,0 +1,234 @@
+{%extends 'index.html' %}{%block content%} {%load static%}
+<div class="swiper-container hero-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide hero-content-wrap" style="background-image: url('../static/images/hero.jpg')">
+            <div class="hero-content-overlay position-absolute w-100 h-100">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h1>The Best <br>Medical Services</h1>
+                            </header>
+                            <!-- .entry-header -->
+
+                            <div class="entry-content mt-4">
+                                <p>Umberella care is providing state of the art <br>medical facilities to patients and making them live <br>a healthy life with their love ones.</p>
+                            </div>
+                            <!-- .entry-content -->
+
+
+                        </div>
+                        <!-- .col -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .hero-content-overlay -->
+        </div>
+        <!-- .hero-content-wrap -->
+
+        <div class="swiper-slide hero-content-wrap" style="background-image: url('../static/images/hero.jpg')">
+            <div class="hero-content-overlay position-absolute w-100 h-100">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h1>Our Blood<br> Bank Services</h1>
+                            </header>
+                            <!-- .entry-header -->
+
+                            <div class="entry-content mt-4">
+                                <p>In order to save precious life of our patients <br> umberella care is providing timely blood <br>bank service through our channels.</p>
+                            </div>
+                            <!-- .entry-content -->
+                        </div>
+                        <!-- .col -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .hero-content-overlay -->
+        </div>
+        <!-- .hero-content-wrap -->
+
+        <div class="swiper-slide hero-content-wrap" style="background-image: url('../static/images/hero.jpg')">
+            <div class="hero-content-overlay position-absolute w-100 h-100">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h1>Our Dental<br>Medical Services</h1>
+                            </header>
+                            <!-- .entry-header -->
+
+                            <div class="entry-content mt-4">
+                                <p>Umberella care is commited to provide our <br>patients with comprehensive, quality and compassionate <br>dental care treatments.</p>
+                            </div>
+                            <!-- .entry-content -->
+
+                        </div>
+                        <!-- .col -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .hero-content-overlay -->
+        </div>
+        <!-- .hero-content-wrap -->
+    </div>
+    <!-- .swiper-wrapper -->
+
+    <div class="pagination-wrap position-absolute w-100">
+        <div class="swiper-pagination d-flex flex-row flex-md-column"></div>
+    </div>
+    <!-- .pagination-wrap -->
+</div>
+<!-- .hero-slider -->
+</header>
+<!-- .site-header -->
+
+<div class="our-departments">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="our-departments-wrap">
+                    <h2>Our Departments</h2>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="our-departments-cont">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <img src="{% static 'images/blood-sample-2.png' %}" alt="">
+
+                                    <h3>Medical Lab</h3>
+                                </header>
+
+                                <div class="entry-content">
+                                    <p>Our medical lab department is running under strict guidelines and standard operating procedures to ensure provision of quality testing services to our patients.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="our-departments-cont">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <img src="{% static 'images/teeth.png' %}" alt="">
+
+                                    <h3>Dental Care</h3>
+                                </header>
+
+                                <div class="entry-content">
+                                    <p>Umberella care is commited to provide our patients with comprehensive, quality and compassionate dental care treatments.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-lg-0">
+                            <div class="our-departments-cont">
+                                <header class="entry-header d-flex flex-wrap align-items-center">
+                                    <img src="{%static 'images/blood-donation-2.png'%}" alt="">
+
+                                    <h3>Blood Bank</h3>
+                                </header>
+
+                                <div class="entry-content">
+                                    <p>In order to save precious life of our patients umberella care is providing timely blood bank service through our channels.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="homepage-boxes">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-18 col-md-10 col-lg-10 mt-10 h-100 align-items-center">
+                <div class="opening-hours">
+                    <h2 class="d-flex align-items-center">Opening Hours</h2>
+
+                    <ul class="p-0 m-0">
+                        <li>Monday - Thursday <span>8.00 - 19.00</span></li>
+                        <li>Friday <span>8.00 - 18.30</span></li>
+                        <li>Saturday <span>9.30 - 17.00</span></li>
+                        <li>Sunday <span>9.30 - 15.00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="testimonial-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Pacient’s Testimonials</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="testimonial-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <div class="testimonial-bg-shape">
+                        <div class="swiper-container testimonial-slider-wrap">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="entry-content">
+                                        <p>I took treatment in many clinics in Lahore but my problem was still didn't solved and my teeth pain was since last 2 years but after knew about umberella care , I took treatment over here I feel much better then
+                                            before
+                                        </p>
+                                    </div>
+                                    <!-- .entry-content -->
+
+                                    <div class="entry-footer">
+                                        <figure class="user-avatar">
+                                            <img src="{% static 'images/user1.jpg'%}" alt="">
+                                        </figure>
+                                        <!-- .user-avatar -->
+
+                                        <h3 class="testimonial-user">Hamza Naveed <span>University of Punjab</span></h3>
+                                    </div>
+                                    <!-- .entry-footer -->
+                                </div>
+                                <!-- .swiper-slide -->
+
+                            </div>
+                            <!-- .swiper-wrapper -->
+
+                            <div class="swiper-pagination-wrap">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="swiper-pagination position-relative flex justify-content-center align-items-center"></div>
+                                        </div>
+                                        <!-- .col -->
+                                    </div>
+                                    <!-- .row -->
+                                </div>
+                                <!-- .container -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .testimonial-slider -->
+</section>
+<!-- .testimonial-section -->
+
+{%endblock%}
