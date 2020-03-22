@@ -1,4 +1,6 @@
 {%extends 'index.html' %}{%block content%} {%load static%}
+
+
 <div class="swiper-container hero-slider">
     <div class="swiper-wrapper">
         <div class="swiper-slide hero-content-wrap" style="background-image: url('../static/images/hero.jpg')">
@@ -7,7 +9,24 @@
                     <div class="row h-100">
                         <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
                             <header class="entry-header">
+
+                                {% if user.is_authenticated%}
+                                <h1>Welcome &nbsp;</h1>
+                                {%if user.is_staff%}
+                                <div class="row" style="margin: 10px;">
+                                    <h2 style="color: black;">Doctor &nbsp;</h2>
+                                </div>
+                                {%else%}
+                                <div class="row" style="margin: 10px;">
+
+                                    <h2 style="color: black;"> {{user.get_username}}
+                                    </h2>
+                                </div>
+                                {%endif%}
+                                <!-- .container -->
+                                {%else%}
                                 <h1>The Best <br>Medical Services</h1>
+                                {%endif%}
                             </header>
                             <!-- .entry-header -->
 

@@ -1,92 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends 'index.html' %}{%block content%}
 
-<head>
-    {%load static %}
-    <title>Hello World</title>
+<br>
+<br>
+<br>
+<h1 style="margin-left: 560px;margin-top: 100px;">
+    Login
+</h1>
+{% if error %} {{error}}
+<br>
+<br> {% endif %}
+<form method="POST" action="{% url 'login' %}">
+    {%csrf_token%}
+    <h6 style="margin-left: 550px;"> Username: </h6>
+    <input type="text" name="username" style="margin-left: 550px;">
+    <h6 style="margin-left: 550px;">Password:</h6>
+    <input type="password" name="password" style="margin-left: 550px;">
+    <br>
+    <br>
+    <input type="submit" name="submit" id="submit" class="form-submit submit btn btn-primary" value="Login" style="margin-left: 570px;" />
+</form>
+<!-- .footer-widgets -->
+</footer>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- .site-footer -->
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <script src="{% static 'js/custom.js' %}"></script>
-</head>
-
-<body>
-    <header class="site-header">
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="{% static 'images/logo4.png'%}" alt="logo"></a>
-                        </div>
-                        <!-- .site-branding -->
-
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
-                                <li><a href="{%url 'home'%}">Home</a></li>
-                                <li><a href="{%url 'makeappointment'%}">Book Appointment</a></li>
-
-                                <li><a href="{%url 'signup'%}">Signup</a></li>
-                                <li class="current-menu-item"><a href="{%url 'login'%}">Login</a></li>
-
-                                <li class="call-btn button gradient-bg mt-3 mt-md-0">
-                                    <a class="d-flex justify-content-center align-items-center" href="#"><img src="{% static 'images/emergency-call.png' %}"> +92 111 222 8888</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- .site-navigation -->
-
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <!-- .hamburger-menu -->
-                    </div>
-                    <!-- .col -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </div>
-        <!-- .nav-bar -->
-        <br>
-        <br>
-        <br>
-        <h1 style="margin-left: 560px;margin-top: 100px;">
-            Login
-        </h1>
-        {% if error %} {{error}}
-        <br>
-        <br> {% endif %}
-        <form method="POST" action="{% url 'login' %}">
-            {%csrf_token%}
-            <h6 style="margin-left: 550px;"> Username: </h6>
-            <input type="text" name="username" style="margin-left: 550px;">
-            <h6 style="margin-left: 550px;">Password:</h6>
-            <input type="password" name="password" style="margin-left: 550px;">
-            <br>
-            <br>
-            <input type="submit" name="submit" id="submit" class="form-submit submit btn btn-primary" value="Login" style="margin-left: 570px;" />
-        </form>
-        <!-- .footer-widgets -->
-        </footer>
-        <!-- .site-footer -->
-
-</body>
-
-</html>
+{%endblock%}

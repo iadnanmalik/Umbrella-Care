@@ -6,7 +6,7 @@ class Appointment(models.Model):
     title=models.CharField(max_length=25)
     phone = models.IntegerField()
     patient= models.ForeignKey(User, on_delete=models.CASCADE)
-
+    date=models.DateTimeField()
     def __str__(self):
         return self.title
         
