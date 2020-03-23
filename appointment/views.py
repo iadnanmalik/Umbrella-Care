@@ -9,6 +9,8 @@ def home(request):
 def makeappointment(request):
     if request.method=='POST':          
         if request.user.is_staff==True:
+            return redirect('login')
+        else:
             if request.POST['doctor']  and request.POST['phone'] and request.POST['date']:
                 appointment=Appointment()
                 appointment.title=request.POST['title']
@@ -19,8 +21,7 @@ def makeappointment(request):
                 return redirect('home')
             else:
                 return render(request,'appointment/appointments.html', {'error':'Please Fill all the information'})
-        else:
-            return redirect('login')
+            
     else:
 
 

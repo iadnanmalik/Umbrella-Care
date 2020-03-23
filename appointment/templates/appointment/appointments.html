@@ -5,6 +5,13 @@
         <br> {% if error %} {{error}}
         <br>
         <br> {% endif %}
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+
+        <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
         <div class="row">
             <div class="col-18 col-md-10 col-lg-10 mt-10 h-100 align-items-center ">
@@ -14,19 +21,36 @@
                     {%else%}
                     <h2 class="d-flex align-items-left">Book Appoinment </h2>
                     {%endif%}
+
                     <form class="d-flex flex-wrap justify-content-between" method="POST" action="{%url 'makeappointment'%}">
                         {% csrf_token %}
                         <select class="select-doctor" name="doctor">
                             <option>Select Doctor</option>
-                            <option>Mr.Shoaib</option>
-                            <option>Mr.Ahmad</option>
+                            <option value="Shoaib">Mr.Shoaib</option>
+                            <option value="Ahmad">Mr.Ahmad</option>
+                            <option value="Sidra">Ms.Sidra</option>
+                            <option value="Atif">Mr.Atif</option>
+                            <option value="Dar">Mr.Dar</option>
                         </select>
 
                         <input type="text" name="title" placeholder="Brief Reason">
 
                         <input type="number" name="phone" placeholder="Phone No">
 
-                        <input type="datetime-local" name="date" placeholder="Select Appoinment Date">
+                        <input id="datepicker" width="370" name="date" placeholder="Pick Date">
+
+                        <select class="select-doctor" name="time">
+                            <option>Select Time</option>
+                            <option value="9AM-10AM">9AM-10AM</option>
+                            <option value="10AM-11AM">10AM-11AM</option>
+                            <option value="11AM-12PM">11AM-12PM</option>
+                            <option value="12PM-1PM">12PM-1PM</option>
+                            <option value="1PM-2PM">1PM-2PM</option>
+                        </select>
+
+
+                        <input type="email" name="email" placeholder="email">
+
                         <input class="button gradient-bg" type="submit" value="Book Appointment">
                     </form>
                 </div>
@@ -37,5 +61,16 @@
         <br>
     </div>
 </div>
-</div>
+
+<script>
+    $(document).ready(function() {
+        $('#datepicker').datepicker({
+            changeYear: true,
+            changeMonth: true,
+            uiLibrary: 'bootstrap',
+            minDate: '0',
+            dateFormat: 'dd-mm-yy'
+        });
+    });
+</script>
 {%endblock%}
