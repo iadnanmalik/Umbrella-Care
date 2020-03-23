@@ -3,7 +3,7 @@
 
 <head>
     {%load static%}
-    <title>Hello World</title>
+    <title>Umbrella Care</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -39,7 +39,7 @@
                                 <li class="current-menu-item"><a href="{%url 'home'%}">Home</a></li>
                                 {% if user.is_authenticated%} {% if user.is_staff%}
 
-                                <li><a href="{%url 'makeappointment'%}">Make Appointment</a></li>
+                                <li><a href="{%url 'makeappointment'%}">View Appointment</a></li>
                                 {%else%}
                                 <li><a href="{%url 'makeappointment'%}">Book Appointment</a></li>
                                 {%endif%}

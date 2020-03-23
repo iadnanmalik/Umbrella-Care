@@ -1,0 +1,35 @@
+{%extends 'index.html' %}{%block content%} {%load static%}
+<div class="container">
+    <div class="row">
+        <div class="col-12 justify-center">
+            <div style="margin: 150px; padding-left: 200px;">
+                <h1 style="color: rgb(63, 63, 170);">Review Information</h1>
+                <br>
+                <h5>Name: &nbsp; {{name}}
+                </h5>
+                <h5>Doctor: &nbsp; {{doctor}}
+                </h5>
+                <h5>Date: &nbsp; {{date}}
+                </h5>
+                <h5>Time: &nbsp; {{time}}
+
+                </h5>
+                <h5>Email: &nbsp; {{email}}
+                </h5>
+                <br>
+                <a href="{%url 'home'%}" style="margin-left: 30px;">
+                    <input class="button gradient-bg" type="submit" value="Done">
+                </a>
+                <br>
+                <h6>
+                    <br> *You will receive a confirmation mail shortly
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br> {{name}} {{phone}} {%endblock%}

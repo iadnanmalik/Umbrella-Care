@@ -1,0 +1,45 @@
+{%extends 'index.html' %}{%block content%} {%load static%} {% if appointments == None %}
+<br> <br> <br> <br> <br> <br>
+<h2 div style="margin-top: 50px; padding-left: 200px;">
+    No appointments to show
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+</h2> {%else%} {%for appointment in appointments.all%}
+<br>
+<br>
+<br>
+<br> {%if appointment.doctor == docname%}
+<div class="col-12 justify-center">
+    <div style="margin-top: 50px; padding-left: 200px;">
+        <h2 style="color: rgb(76, 76, 138);"> {{appointment.title}} </h2>
+        <h5>Name: &nbsp; {{appointment.patient}}
+        </h5>
+
+        <h5>Doctor: &nbsp; {{appointment.doctor}}
+        </h5>
+        <h5>Date: &nbsp; {{appointment.date}}
+        </h5>
+        <h5>Time: &nbsp; {{appointment.timer}}
+
+        </h5>
+        <h5>Email: &nbsp; {{appointment.email}}
+        </h5>
+    </div>
+
+</div>
+{%endif%} {%endfor%} {%endif%}
+<br>
+<br>
+<br><br>
+<br>
+
+<br><br>
+<br>
+<br><br>
+<br> {%endblock%}

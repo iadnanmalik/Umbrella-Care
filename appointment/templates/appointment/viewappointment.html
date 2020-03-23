@@ -1,0 +1,29 @@
+{%extends 'index.html' %}{%block content%} {%load static%}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-12 justify-center">
+            <div style="margin: 150px; padding-left: 200px;">
+                <form class="d-flex flex-wrap justify-content-between" method="POST" action="{%url 'viewappointment'%}">
+                    {% csrf_token %}
+                    <select class="select-doctor" name="doctor" style="width: 300px;">
+                        <option>Select Doctor</option>
+                        <option value="Shoaib">Mr.Shoaib</option>
+                        <option value="Ahmad">Mr.Ahmad</option>
+                        <option value="Sidra">Ms.Sidra</option>
+                        <option value="Atif">Mr.Atif</option>
+                        <option value="Dar">Mr.Dar</option>
+                    </select>
+                    <input class="button gradient-bg" type="submit" value="View Appointments">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br> {%endblock%}
